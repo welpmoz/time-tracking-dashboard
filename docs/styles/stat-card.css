@@ -1,9 +1,9 @@
 .stat {
     grid-area: var(--my-area);
-    display: flex;
-    background-color: var(--bg-work);
-    flex-direction: column;
     border-radius: 1.5rem;
+    background-color: var(--bg-work);
+    display: flex;
+    flex-direction: column;
 }
 
 .stat > .stat-bg {
@@ -33,21 +33,17 @@
 .stat > .stat-info > div {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
-@media (min-width: 62.5rem) {
-    /* .stat {
-        align-self: stretch;
-    } */
-
-    .stat > .stat-bg {
+/* tablet-breakpoint */
+@media (min-width: 37.5rem) {
+    .stat>.stat-bg {
         height: 4.5rem;
     }
 
-    .stat > .stat-info {
+    .stat>.stat-info {
         padding: 3.2rem 3rem;
         gap: 2.4rem;
     }

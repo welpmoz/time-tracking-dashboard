@@ -20,7 +20,8 @@
     font-size: 62.5%;
 
     --my-area: unset;
-    --bp-desktop: 62.5rem;
+    --desktop-breakpoint: 75rem;
+    --tablet-breakpoint: 37.5rem;
 }
 
 * {
@@ -30,7 +31,6 @@
 }
 
 .screen {
-    padding: 8.1rem 2.4rem;
     background-color: var(--very-dark-blue);
     min-height: 100vh;
     display: grid;
@@ -47,7 +47,28 @@
     gap: 2.4rem;
 }
 
-@media (min-width: 62.5rem) {
+/* small-breakpoint */
+@media (min-width: 21.25rem) {
+    .screen {
+        padding: 8.1rem 2.4rem;
+    }
+}
+
+/* tablet-breakpoint */
+@media (min-width: 37.5rem) {
+    .screen {
+        grid-template-columns: repeat(6, 6.5rem);
+        grid-template-areas: "user user user user user user"
+            "work work work play play play"
+            "study study study exercise exercise exercise"
+            "social social social self-care self-care self-care";
+        align-content: center;
+        justify-content: center;
+    }
+}
+
+/* desktop-breakpoint */
+@media (min-width: 75rem) {
     .screen {
         grid-template-columns: repeat(12, 6.5rem);
         grid-template-areas: "user user user work work work play play play study study study"
