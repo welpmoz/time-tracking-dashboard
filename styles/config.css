@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --bg-work: hsl(15, 100%, 70%);
+    --bg-play: hsl(195, 74%, 65%);
+    --bg-study: hsl(348, 100%, 68%);
+    --bg-exercise: hsl(145, 58%, 55%);
+    --bg-social: hsl(264, 64%, 52%);
+    --bg-self-care: hsl(43, 84%, 65%);
+
+    --very-dark-blue: hsl(226, 45%, 10%);
+    --dark-blue: hsl(236, 45%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(236, 100%, 87%);
+    --bg-user: hsl(246, 80%, 60%);
+
+    font-family: 'Rubik', sans-serif;
+    font-optical-sizing: auto;
+    font-size: 62.5%;
+
+    --my-area: unset;
+    --bp-desktop: 62.5rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.screen {
+    padding: 8.1rem 2.4rem;
+    background-color: var(--very-dark-blue);
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "user"
+        "work"
+        "play"
+        "study"
+        "exercise"
+        "social"
+        "self-care";
+    align-items: center;
+    gap: 2.4rem;
+}
+
+@media (min-width: 62.5rem) {
+    .screen {
+        grid-template-columns: repeat(12, 6.5rem);
+        grid-template-areas: "user user user work work work play play play study study study"
+            "user user user exercise exercise exercise social social social self-care self-care self-care";
+        align-content: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+}

@@ -8,73 +8,138 @@
   
   <title>Frontend Mentor | Time tracking dashboard</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="../index.css">
+
 </head>
-<body>
-
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
+<body class="screen">
+  <main class="user-wrapper">
+    <div class="user">
+      <div class="img-wrapper">
+        <img src="../images/image-jeremy.png" alt="User Image">
+      </div>
+      <div class="user-info">
+        <h1 class="text-caption">Report for</h1>
+        <h2 class="text-heading">Jeremy Robson</h2>
+      </div>
+    </div>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <div class="frecuencies text-tab">
+      <div>Daily</div>
+      <div>Weekly</div>
+      <div>Monthly</div>
+    </div>
+  </main>
+
+  <section class="stat" style="--my-area: work;">
+    <div class="stat-bg">
+      <img src="../images/icon-work.svg" alt="Work Icon">
+    </div>
+    <div class="stat-info">
+      <div class="header">
+        <h3 class="text-tab-medium">Work</h3>
+        <img src="../images/icon-ellipsis.svg" alt="More icon">
+      </div>
+      <div class="content">
+        <p class="text-large">5hrs</p> <!-- daily -->
+        <p class="text-caption">
+          Last week - <span>7hrs</span>
+        </p> <!-- daily -->
+      </div>
+    </div>
+    <!-- 32hrs
+    Previous - 36hrs
+    103hrs
+    Previous - 128hrs -->
+  </section>
+
+  <section class="stat" style="--my-area: play;">
+    <div class="stat-bg">
+      <img src="../images/icon-work.svg" alt="Work Icon">
+    </div>
+    <div class="stat-info">
+      <div class="header">
+        <h3 class="text-tab-medium">Work</h3>
+        <img src="../images/icon-ellipsis.svg" alt="More icon">
+      </div>
+      <div class="content">
+        <p class="text-large">5hrs</p> <!-- daily -->
+        <p class="text-caption">
+          Last week - <span>7hrs</span>
+        </p> <!-- daily -->
+      </div>
+    </div>
+  </section>
+
+  <section class="stat" style="--my-area: study;">
+    <div class="stat-bg">
+      <img src="../images/icon-work.svg" alt="Work Icon">
+    </div>
+    <div class="stat-info">
+      <div class="header">
+        <h3 class="text-tab-medium">Work</h3>
+        <img src="../images/icon-ellipsis.svg" alt="More icon">
+      </div>
+      <div class="content">
+        <p class="text-large">5hrs</p> <!-- daily -->
+        <p class="text-caption">
+          Last week - <span>7hrs</span>
+        </p> <!-- daily -->
+      </div>
+    </div>
+  </section>
+
+  <section class="stat" style="--my-area: exercise;">
+    <div class="stat-bg">
+      <img src="../images/icon-work.svg" alt="Work Icon">
+    </div>
+    <div class="stat-info">
+      <div class="header">
+        <h3 class="text-tab-medium">Work</h3>
+        <img src="../images/icon-ellipsis.svg" alt="More icon">
+      </div>
+      <div class="content">
+        <p class="text-large">5hrs</p> <!-- daily -->
+        <p class="text-caption">
+          Last week - <span>7hrs</span>
+        </p> <!-- daily -->
+      </div>
+    </div>
+  </section>
+
+  <section class="stat" style="--my-area: social;">
+    <div class="stat-bg">
+      <img src="../images/icon-work.svg" alt="Work Icon">
+    </div>
+    <div class="stat-info">
+      <div class="header">
+        <h3 class="text-tab-medium">Work</h3>
+        <img src="../images/icon-ellipsis.svg" alt="More icon">
+      </div>
+      <div class="content">
+        <p class="text-large">5hrs</p> <!-- daily -->
+        <p class="text-caption">
+          Last week - <span>7hrs</span>
+        </p> <!-- daily -->
+      </div>
+    </div>
+  </section>
+
+  <section class="stat" style="--my-area: self-care;">
+    <div class="stat-bg">
+      <img src="../images/icon-work.svg" alt="Work Icon">
+    </div>
+    <div class="stat-info">
+      <div class="header">
+        <h3 class="text-tab-medium">Work</h3>
+        <img src="../images/icon-ellipsis.svg" alt="More icon">
+      </div>
+      <div class="content">
+        <p class="text-large">5hrs</p> <!-- daily -->
+        <p class="text-caption">
+          Last week - <span>7hrs</span>
+        </p> <!-- daily -->
+      </div>
+    </div>
+  </section>
 </body>
 </html>

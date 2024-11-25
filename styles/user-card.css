@@ -1,0 +1,59 @@
+.user-wrapper {
+    grid-area: user;
+    background-color: var(--dark-blue);
+    border-radius: 1.5rem;
+}
+
+.user-wrapper > .user {
+    padding: 3.4rem 3.9rem 3.4rem 3.2rem;
+    background-color: var(--bg-user);
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+
+.user-wrapper > .user > .img-wrapper {
+    width: clamp(6.4rem, 6vw, 7.8rem);
+}
+
+.user-wrapper > .user > .img-wrapper img {
+    max-inline-size: 100%;
+    block-size: auto;
+    border-radius: 50%;
+    border: 0.3rem solid var(--white);
+}
+
+
+.user-wrapper > .user > .user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.user-wrapper > .frecuencies {
+    padding: 2.4rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.user-wrapper > .frecuencies > div {
+    cursor: pointer;
+}
+
+@media (min-width: 62.5rem) {
+    .user-wrapper > .user {
+        padding: 3.7rem 3.2rem 8rem 3.2rem;
+        flex-direction: column;
+        align-items: start;
+        gap: 4.3rem;
+    }
+
+    .user-wrapper > .frecuencies {
+        padding: 2.6rem 0 3.2rem 3.2rem;
+        flex-direction: column;
+        gap: 2.1rem;
+    }
+}
