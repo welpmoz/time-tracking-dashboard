@@ -1,15 +1,22 @@
 .stat {
     grid-area: var(--my-area);
     border-radius: 1.5rem;
-    background-color: var(--bg-work);
     display: flex;
     flex-direction: column;
+    transition: transform 0.5s ease-out;
+}
+
+.stat:hover {
+    transform: scale(1.05);
+}
+
+.stat:hover > .stat-info {
+    background-color: var(--bg-hover-stat);
 }
 
 .stat > .stat-bg {
     overflow: hidden;
     border-radius: 1.5rem 1.5rem 0 0;
-    background-color: var(--bg-work);
     position: relative;
     height: 3.8rem;
 }
@@ -28,6 +35,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
+    transition: background-color 0.5s ease-out;
 }
 
 .stat > .stat-info > div {
@@ -35,6 +43,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.stat > .stat-info > .header > img {
+    cursor: pointer;
 }
 
 /* tablet-breakpoint */

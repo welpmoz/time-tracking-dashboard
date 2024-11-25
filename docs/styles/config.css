@@ -14,6 +14,7 @@
     --white: hsl(0, 0%, 100%);
     --pale-blue: hsl(236, 100%, 87%);
     --bg-user: hsl(246, 80%, 60%);
+    --bg-hover-stat: hsl(236, 41%, 34%);
 
     font-family: 'Rubik', sans-serif;
     font-optical-sizing: auto;
@@ -22,6 +23,50 @@
     --my-area: unset;
     --desktop-breakpoint: 75rem;
     --tablet-breakpoint: 37.5rem;
+}
+
+.color-very-dark-blue {
+    color: var(--very-dark-blue);
+}
+
+.color-dark-blue {
+    color: var(--dark-blue);
+}
+
+.color-desaturated-blue {
+    color: var(--desaturated-blue);
+}
+
+.color-pale-blue {
+    color: var(--pale-blue);
+}
+
+.color-white {
+    color: var(--white);
+}
+
+.bg-work {
+    background-color: var(--bg-work);
+}
+
+.bg-play {
+    background-color: var(--bg-play);
+}
+
+.bg-study {
+    background-color: var(--bg-study);
+}
+
+.bg-exercise {
+    background-color: var(--bg-exercise);
+}
+
+.bg-social {
+    background-color: var(--bg-social);
+}
+
+.bg-self-care {
+    background-color: var(--bg-self-care);
 }
 
 * {
