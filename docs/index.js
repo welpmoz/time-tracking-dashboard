@@ -1,7 +1,11 @@
-const renderStat = (stat) => {
+const stats = [];
+let frequency = 'daily';
+
+const renderStat = (stat, frequency) => {
     let statTitle = stat.title.toLowerCase();
     statTitle = statTitle.replace(' ', '-');
-    let timeframes = stat.timeframes.daily;
+    let timeframes = stat.timeframes[frequency];
+    let labelFrequency = frequency === 'daily' ? 'day' : frequency === 'weekly' ? 'week' : 'month';
     let statContainer = document.getElementById(`${statTitle}-stat`);
     statContainer.innerHTML = `
         <div class="stat-bg bg-${statTitle}">
@@ -15,15 +19,15 @@ const renderStat = (stat) => {
             <div class="content">
                 <p class="text-large color-white">${timeframes.current}hrs</p> <!-- daily -->
                 <p class="text-caption color-pale-blue">
-                Last week - <span>${timeframes.previous}</span>hrs
+                Last ${labelFrequency} - <span>${timeframes.previous}</span>hrs
                 </p>
             </div>
         </div>
     `;
 }
 
-function populateDOM(data) {
-    data.forEach(renderStat);
+function populateDOM(data, frequency='daily') {
+    data.forEach((stat) => renderStat(stat, frequency));
 }
 
 fetch('./data.json').then((response) => {
@@ -31,7 +35,26 @@ fetch('./data.json').then((response) => {
 
     return response.json();
 }).then((data) => {
-    console.log('showing data', data);
-    populateDOM(data);
+    data.forEach((stat) => {
+        stats.push(stat);
+    });
+    populateDOM(stats, frequency);
 });
 
+const frequenciesContainer = document.getElementById('frequencies');
+const tabs = frequenciesContainer.querySelectorAll('div');
+
+tabs.forEach((tab) => {
+   tab.addEventListener('click', function () {
+    let freqClicked = this.innerHTML.toLowerCase();
+    if (freqClicked !== frequency) {
+        let lastTabClicked = document.getElementById(`tab-${frequency}`);
+        // update the stat cards
+        frequency = freqClicked;
+        populateDOM(stats, frequency);
+        // update the tab selected color
+        this.classList.add('freq-selected');
+        lastTabClicked.classList.remove('freq-selected');
+    }
+   }) ;
+});

@@ -49,6 +49,10 @@
     color: var(--white);
 }
 
+.user-wrapper > .frecuencies > .freq-selected {
+    color: var(--white);
+}
+
 /* dekstop-breakpoin */
 @media (min-width: 75rem) {
     .user-wrapper > .user {
