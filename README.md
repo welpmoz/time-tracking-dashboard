@@ -21,8 +21,8 @@ This is a solution to the [Time Tracking Dashboard](https://www.frontendmentor.i
 
 ### Links
 
-- Solution URL: [GitHub repository](https://github.com/welpmoz/newsletter-sign-up-with-success-message).
-- Live Site URL: [Live site](https://welpmoz.github.io/newsletter-sign-up-with-success-message/)
+- Solution URL: [GitHub repository](https://github.com/welpmoz/time-tracking-dashboard).
+- Live Site URL: [Live site](https://welpmoz.github.io/time-tracking-dashboard/)
 
 ## My process
 
